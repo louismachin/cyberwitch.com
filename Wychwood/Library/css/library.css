@@ -1,0 +1,222 @@
+body {
+    font-size: 109%;
+    font-family: Palatino Linotype, Palatino, Times New Roman, Times;
+    color: #222222;
+    background-color: #efd1ab;
+    background-image: url(/Wychwood/Library/images/libraryBackground2.gif);
+    background-attachment: fixed;
+    margin: 0 0 0 0;
+    min-width: 785px;
+}
+a, a:visited, a:active, a:hover {
+    color: #606000;
+}
+img {
+    border: 0px;
+}
+cite {
+    text-decoration: underline;
+    font-style: normal;
+}
+blockquote.short {
+    color: #666;
+    font-size: 86%;
+    font-family: Palatino Linotype, Palatino, Times New Roman, Times;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0 0 2em;
+    line-height: normal;
+    text-align: center;
+    orphans: 0;
+}
+blockquote.aside {
+    color: #666;
+    font-size: 86%;
+    font-family: Palatino Linotype, Palatino, Times New Roman, Times;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0 0 2em;
+    line-height: normal;
+    text-align: justify;
+    orphans: 0;
+}
+blockquote.aside:before {
+    content: url(/Wychwood/Library/images/bbbul.png);
+    display: block;
+    text-align: center;
+}
+blockquote.aside:after {
+    content: url(/Wychwood/Library/images/bbbul.png);
+    display: block;
+    margin-top: 6px;
+    text-align: center;
+}
+hr {
+    height: 60px;
+    border-style: none;
+    background-color: transparent;
+    background-image: url(/Wychwood/Library/images/libraryLine.gif);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+div.hr {
+    height: 60px;
+    width: 100%;
+    border-style: none;
+    background-color: transparent;
+    background-image: url(/Wychwood/Library/images/libraryLine.gif);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.75em;
+    margin-bottom: .25em;
+}
+h3 {
+    font-size: 1.4em;
+    padding-bottom: .25em;
+}
+h4 {
+    font-size: 1.25em;
+    padding-top: 1em;
+    padding-bottom: .25em;
+}
+div#oz {
+    border: 0;
+}
+div#hither {
+    background-image: url(/Wychwood/Library/images/libraryGreenBackLeft.gif);
+    background-position: left;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+div#thither {
+    background-image: url(/Wychwood/Library/images/libraryGreenBackRight.gif);
+    background-position: right;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+div#yon {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    clear: both;
+    width: 600px;
+}
+div#horn {
+    text-align: center;
+}
+div#horn.brigid {
+    background-image: url(/Wychwood/Library/images/BrigidsBookshelf-587.png);
+    background-position: center 5px;
+    background-repeat: no-repeat;
+}
+div#horn.brigid IMG, div#horn.brigid HR {
+    visibility: hidden;
+}
+div#hoof {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(/Wychwood/Library/images/flouroak.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+div#claw {
+    clear: both;
+}
+div#hoof-castle {
+    vertical-align: bottom;
+    float: left;
+}
+div#hoof-castle img {
+    position: relative;
+    top: -5px;
+}
+div#hoof-library {
+    vertical-align: bottom;
+    float: right;
+}
+div.lib-by {
+    color: #754c24;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1em;
+    line-height: .75;
+    margin-bottom: 0; 
+}
+div.lib-by:after {
+    content: url(/Wychwood/Library/images/flourrv.png);
+}
+div.lib-book {
+}
+div.lib-book p {
+    quotes:  ;
+    orphans: 4;
+    text-align: justify;
+}
+div.lib-book p:first-letter {
+    font-size: 300%;
+    float: left;
+    color: #754c24;
+    padding-right: 4px;
+    font-size: 250%;
+}
+div.lib-ie-first-letter p:first-letter {
+    margin-top: -20px;
+}
+p.copy {
+    color: #754c24;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 0 3em;
+}
+div.lib-permis {
+    color: #754c24;
+    font-size: 86%;
+    font-weight: bold;
+    margin: 0 0 2.5em;
+    text-align: center;
+    orphans: 0;
+}
+div.lib-permis:before {
+    content: url(/Wychwood/Library/images/knobleft.png) " ";
+    vertical-align: sub;
+}
+div.lib-permis:after {
+    content: " " url(/Wychwood/Library/images/knobright.png);
+    vertical-align: sub;
+}
+.center {
+    text-align: center;
+}
+.bold {
+    font-weight: bolder;
+}
+
+/*
+     FILE ARCHIVED ON 21:49:52 Jul 08, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:36:36 Apr 10, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.441
+  exclusion.robots: 0.047
+  exclusion.robots.policy: 0.04
+  esindex: 0.005
+  cdx.remote: 12.979
+  LoadShardBlock: 301.677 (3)
+  PetaboxLoader3.datanode: 273.605 (4)
+  PetaboxLoader3.resolve: 58.257 (2)
+  load_resource: 55.861
+*/

@@ -1,0 +1,356 @@
+html, body {
+	font-family: Verdana, Arial;
+	color: white;
+}
+body {
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	background-color: Black;
+	height: 1590px;
+	overflow: scroll;
+}
+#cotc
+{
+	position: relative;
+	top: -140px;
+	font-size: 0.7em;
+}
+#cotc a
+{
+    color: red;
+    font-weight: bold;
+}
+#cotc a:hover
+{
+    text-decoration: underline;
+    color: white;
+}
+#rb {
+	height: 224px;
+	background-image: url(/bowers/images/rb2.png);
+	background-position: -24px -44px;
+	background-repeat: no-repeat;
+}
+#official strong {
+	color: #ccccff;
+}
+#refer-to-copyright
+{
+    visibility: hidden;
+}
+#license strong {
+	color: #ccccff;
+}
+#license {
+	margin-left: -100px;
+	margin-top: 43px;
+	display: none;
+	position: absolute;
+	width: 400px;
+	height: 500px;
+	font-size: 75%;
+	text-align: center;
+}
+#fly {
+	margin: auto auto auto auto;
+	position: absolute;
+	width: 450px;
+	height: 550px;
+	
+}
+.copyinfo {
+	font-size: 0.85em;
+	font-style: italic;
+}
+#online {
+	position: relative;
+	top: 0px;
+	left: auto;
+	margin-left: 20px;
+}
+.pdflink {
+	
+	
+}
+#rb p {
+	position: relative;
+	left: 20px;
+	top: 100px;
+}
+#oz {
+	background-image: url(/bowers/images/fade2.png);
+	background-attachment: scroll;
+	background-repeat: repeat-x;
+	position: fixed;
+	margin: 0 auto 0 auto;
+	width: 100%;
+	top: -16px;
+}
+#iz {
+	background-image: url(/bowers/images/glyphfrost.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	margin: 0 auto 0 auto;
+	width: 100%;
+	min-width: 600px;
+	max-width: 1200px;
+}
+a {
+	font-family: Verdana, Arial;
+	font-size: small;
+	text-decoration: none;
+	line-height: 24px;
+	color: Yellow;
+}
+#pdfs li {
+	margin-bottom: 5px;
+}
+#pdfs a {
+	color: #555555;
+}
+.style2 {
+	font-size: large;
+}
+.curt {
+	font-size: 0.6em;
+	color: #99bbff;
+}
+hr {
+	border: solid 1px #5577ee;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+h1 {
+	font-size: 1em;
+	text-align: center;
+	margin-bottom: 0;
+}
+h2 {
+	font-size: 1em;
+	text-align: center;
+	font-style: italic;
+	font-weight: lighter;
+	margin-top: 0;
+	color: #5577ee;
+}
+h3 {
+	font-size: 0.7em;
+	text-align: center;
+	font-weight: bold;
+	color: #bbbbbb;
+	padding-bottom: 40px;
+}
+.book p {
+	position: relative;
+	line-height: 17px;
+	font-size: 11pt;
+	height: 100px;
+	color: #eeeeee;
+}
+#copyright {
+	position: relative;
+	top: -130px;
+	font-size: 0.6em;
+}
+#copyright a {
+	color: white;	
+	font-weight: lighter;
+}
+#copyright a:hover {
+	color: yellow;	
+	text-decoration: underline;
+}
+#signed
+{
+    position: relative;
+    margin: 0 auto 0 auto;
+    font-size: 80%;
+    font-style: normal;
+}
+#official #signed
+{
+    top: -45px;
+}
+#license #signed
+{
+    margin-top: 20px;
+}
+#maid
+{
+    border-top: dashed 1px #777777;
+    padding-top: 3px;
+}
+#legacy #maid
+{
+    border: none;
+    visibility: hidden;
+}
+#shani
+{
+    font-style: italic;
+    font-weight: bolder;
+}
+#legacy #shani
+{
+}
+#main {
+	height: 1350px;
+	min-width: 600px;
+	width: auto;
+}
+p.copy {
+	position: relative;
+	top: -12px;
+	font-weight: bold;
+}
+p.copy a:hover {
+	color: white;
+	text-decoration: underline;
+}
+a.copy {
+	font-weight: bold;
+	color: #aaaaaa;
+}
+a.copy a:hover {
+	color: white;
+	text-decoration: underline;
+}
+.book ul {
+	margin-left: 47px;
+}
+.style3 {
+	font-size: small;
+}
+.download {
+	font-size: 1.2em;
+	font-weight: bolder;
+	color: #eeeeee;
+}
+.download:hover {
+	color: yellow;
+}
+p {
+	margin-left: 20px;
+}
+mid {
+	width: 20%;
+	
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+.half {
+	width: 40%;
+}
+.wee {
+	width: 50%;
+}
+.makeway {
+}
+#books {
+	position: relative;
+	text-align: center;
+	margin: 0 auto 0 auto;
+	top: -160px;
+	left: auto;
+	margin-right: 20px;
+}
+.book {
+	position: relative;
+	text-align: left;
+	margin: 0 auto 0 auto;
+	width: 300px;
+}
+#terms {
+}
+#terms ul {
+	text-align: left;
+	margin-top: 3px;
+}
+#terms li {
+	margin-bottom: 11px;
+	font-style: normal;
+}
+.next {
+	padding: 2px 4px;
+	font-weight: bolder;
+	border: solid 1px yellow;
+	color: white;
+}
+.next:hover {
+	color: yellow;
+	border: solid 1px white;
+}
+.clear {
+	clear: both;
+}
+.center {
+	text-align: center;
+}
+a img {
+	border: solid 1px #cccccc;
+}
+.roebuck
+{
+    color: #66ba66;
+}
+div#copyright-fyi, p#research-links {
+    font-style: normal;
+    font-size: 90%;
+}
+p#research-links a:hover {
+	color: white;
+	text-decoration: underline;
+}
+div#copyright-fyi p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #aaaaaa;
+}
+div#copyright-fyi a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 90%;
+}
+div#copyright-fyi a {
+	color: #aaaaaa;
+}
+div#copyright-fyi a:hover {
+	color: white;
+	text-decoration: underline;
+}
+div#copyright-fyi p#disclaimer
+{
+    margin-top: 4px;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 70%;
+    color: white;
+}
+div#copyright-fyi p.fyi {
+    font-size: 70%;
+}
+
+/*
+     FILE ARCHIVED ON 21:48:28 Jul 08, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:58:43 Apr 10, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.553
+  exclusion.robots: 0.056
+  exclusion.robots.policy: 0.047
+  esindex: 0.007
+  cdx.remote: 14.684
+  LoadShardBlock: 595.619 (3)
+  PetaboxLoader3.datanode: 115.364 (4)
+  PetaboxLoader3.resolve: 1071.097 (2)
+  load_resource: 676.776
+*/

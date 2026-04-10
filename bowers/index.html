@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>The Writings of Roy Bowers (Robert Cochrane)</title>
+<link rel="canonical" href="index.html"/>
+<link href="/bowers/foggypint.css" rel="stylesheet" type="text/css"/>
+<link href="/bowers/the-cauldron.css" rel="stylesheet" type="text/css"/>
+<script src="/bowers/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+        function nextBookByTheseAuthors() {
+            if (!nextBookByTheseAuthors.show) {
+                nextBookByTheseAuthors.show = 1;
+                $("#published2").hide();
+                $("a.next").click(nextBookByTheseAuthors);
+                return false;
+            }
+            if (nextBookByTheseAuthors.show == 1) {
+                nextBookByTheseAuthors.show = 2;
+                $("#published1").hide();
+                $("#published2").fadeIn();
+            } else {
+                nextBookByTheseAuthors.show = 1;
+                $("#published2").hide();
+                $("#published1").fadeIn();
+            }
+            alsoStats();
+        }
+
+        function bookStats(dest) {
+            if (dest) {
+                if (dest === 1) dest = "CapallBann.co.uk";
+                else if (dest === 2) dest = "Amazon.co.uk";
+                else if (dest === 3) dest = "Amazon.com";
+            } else {
+                dest = "Unknown";
+            }
+            var v = 0;
+            if (nextBookByTheseAuthors.show) {
+                if (nextBookByTheseAuthors.show === 1) v = 1;
+                else if (nextBookByTheseAuthors.show === 2) v = 2;
+            }
+            try { pageTracker._trackEvent("Bowers", "Promo", dest, v); } catch (gerr) {return;}
+        }
+        function alsoStats() {
+            var v = 0;
+            if (nextBookByTheseAuthors.show) {
+                if (nextBookByTheseAuthors.show === 1) v = 1;
+                else if (nextBookByTheseAuthors.show === 2) v = 2;
+            }
+            try { pageTracker._trackEvent("Bowers", "Interact", "Books", v); } catch (gerr) {return;}
+        }
+        function flyStats(v) {
+            try { pageTracker._trackEvent("Bowers", "Interact", "FlyLicSum", v?1:0); } catch (gerr) {return;}
+        }
+        function adviceStats() {
+            try { pageTracker._trackEvent("Bowers", "Interact", "GotoCopyright"); } catch (gerr) {return;}
+        }
+        function copyStats() {
+            try { pageTracker._trackEvent("Bowers", "Nav", "GotoCopyright"); } catch (gerr) {return;}
+        }
+        function backStats() {
+            try { pageTracker._trackEvent("Bowers", "Nav", "GotoDefault"); } catch (gerr) {return;}
+        }
+        function mailStats() {
+            try { pageTracker._trackEvent("Bowers", "MailTo", "BowersCopyright"); } catch (gerr) {return;}
+        }
+        function tcStats(v) {
+            if (!!v) {
+                if (v < 1 || v > 1) v = 0;
+            } else v = 0;
+            try { pageTracker._trackEvent("Bowers", "Exit", "www.the-cauldron.org.uk", v); } catch (gerr) {return;}
+        }
+        function cotcStats(v) {
+            if (!!v) {
+                if (v < 1 || v > 3) v = 0;
+            } else v = 0;
+            try { pageTracker._trackEvent("Bowers", "Exit", "www.ClanOfTubalCain.org.uk", v); } catch (gerr) {return;}
+        }
+        function pdfStats(dest) {
+            if (dest) {
+                if (dest === 1) dest = "wilson.pdf";
+                else if (dest === 2) dest = "norman.pdf";
+                else if (dest === 3) dest = "bill.pdf";
+                else if (dest === 4) dest = "esbat.pdf";
+                else if (dest === 5) dest = "craft.pdf";
+                else if (dest === 6) dest = "cords.pdf";
+                else if (dest === 7) dest = "faith.pdf";
+                else if (dest === 8) dest = "ash.pdf";
+                else if (dest === 9) dest = "all.pdf";
+                else if (dest ===10) dest = "all.zip";
+            } else {
+                dest = "Unknown";
+            }
+            try { pageTracker._trackEvent("Bowers", "Download", dest); } catch (gerr) {return;}
+        }
+        function linkStats(dest) {
+            if (dest) {
+                if (dest === "https://en.wikipedia.org//wiki/Copyright") dest = "WIKI-COPY-General";
+                else if (dest === "https://en.wikipedia.org//wiki/Limitations_and_exceptions_to_copyright") dest = "WIKI-COPY-LimitsExcp";
+                else if (dest === "https://www.museumscopyright.org.uk//private.pdf") dest = "MRTP-COPY-ExpChartUK";
+                else if (dest === "https://www.wipo.int//about-ip/en/ipworldwide/country.htm") dest = "WIPO-COPY-AllCountries";
+                else if (dest === "https://en.wikipedia.org//wiki/Copyright_law_of_the_United_Kingdom") dest = "WIKI-COPY-UK";
+                else if (dest === "https://en.wikipedia.org//wiki/United_States_copyright_law") dest = "WIKI-COPY-US";
+                else if (dest === "https://en.wikipedia.org//wiki/Canadian_copyright_law") dest = "WIKI-COPY-Canada";
+                else if (dest === "https://en.wikipedia.org//wiki/Copyright_law_of_the_European_Union") dest = "WIKI-COPY-EU";
+                else if (dest === "https://en.wikipedia.org//wiki/Copyright_on_religious_works") dest = "WIKI-COPY-Religious";
+            } else {
+                dest = "UNKN-COPY-Unknown";
+            }
+            try { pageTracker._trackEvent("Bowers", "TargetBlank", dest); } catch (gerr) {return;}
+        }
+
+        function canonical(pathonly) {
+            try {
+                var links = document.getElementsByTagName("link"), cano = null;
+                for (var i=0, len=links.length; i<len; i++) {
+                    var l = links[i];
+                    if (l.rel==="canonical") {
+                        cano = l.href || null;
+                        break;
+                    }
+                }
+            } catch (canerr) { }
+            function fmt(name, pathonly) {
+                if (!!pathonly) {
+                    var n = (name = String(name)).toLowerCase();
+                    if (n.substr(0, 7) === "http://") n = n.substr(7);
+                    else if (n.substr(0, 8) === "https://") n = n.substr(8);
+                    if (n.substr(0, 4) === "www.") n = n.substr(4);
+                    if (n.substr(0, 14) === "cyberwitch.com") n = n.substr(14);
+                    n = name.substr(name.length - n.length);
+                    if (n.length > 0 && n.substr(n.length - 1, 1) === "#") n = n.substr(0, n.length - 1);
+                    if (n.length === 0) n = "/";
+                    return n;
+                } else return String(name);
+            }
+            if (!!cano) return fmt(cano, !!pathonly);
+            else return fmt(document.location, !!pathonly);
+        }
+
+        function pagesize() {
+            var w = $(window);
+            var d = $("#oz");
+            var s = "100%";
+            if (w.width() < 1) {
+                s = "70%";
+                d.css("font-size", s);
+                $("#rb span").css("font-size", s);
+                $("#online a").css("font-size", s);
+                $("#books p").css("font-size", s);
+                $("#books h3").css("padding-bottom", "6px");
+                $("a.pdflinks").css("margin-bottom", "0px");
+                $("#online li").css("margin-bottom", "0px");
+                $("#online ul").css("margin-bottom", "0px");
+                $("#books").css("top","-40px")
+                $(".copyright").css("font-size","95%")
+                $("#books div.book *").css("margin-right","40px");
+                $("#books p").css("padding-right","40px");
+                $("#books p").css("height", "85px");
+                $("#books ul").css("position", "relative").css("margin-top", "-10px");
+                $("#books li").css("position", "relative").css("margin-bottom", "-10px").css("margin-left", "-10px");
+                $("#books a").css("font-size", s);
+                $("#books .next").css("font-size", s);
+                $("#books img").css("height","100px").css("width", "70px").css("padding-right", "0px");
+                $("#fly").css("font-size", "80%").css("margin-top", "60px").css("margin-left", "-60px");
+                $("#cotc").css("font-size", s).css("position", "relative").css("padding-top", "85px");
+                $("#copyright").css("font-size", s).css("position", "relative").css("margin-top", "10px");
+                $("#main").width(w.width()-42);
+                $("#iz").css("background-image", "url(images/glyph50.png)");
+                $("#rb").css("background-image", "url(images/rb50.png)").css("background-position", "-12px -22px").height(70);
+                $("#rb p").css("top", "44px");
+            } else if (w.width()<800) {
+            } else if (w.width()<1024) { ;
+            } else if (w.width()<1280) { ;
+            } else { ;
+            }
+
+        }
+
+        $(function() {//return;
+            flying = false;
+            var w = $(window);
+            w.scroll(function(ev) {
+                $("#oz").css("top", -1 * $(window).scrollTop());
+            });
+            w.resize(function() {
+                pagesize();
+                $("#iz").css("width", $(window).width() - 42);
+                $("#main").css("width", "100%");
+            });
+            $("p.copy").click(function() {
+                if (flying) $("#license").fadeOut();
+                else $("#license").fadeIn();
+                flying = !flying;
+                flyStats(flying);
+            });
+            $("div#cotc a").click(function() {
+                cotcStats(1);
+            });
+            $("div#copyright a").click(function() {
+                copyStats();
+            });
+            $("div#license a.copyinfo").click(function() {
+                adviceStats();
+            });
+            nextBookByTheseAuthors.show = 1;
+            $("#published2").hide();
+            $("a.next").click(nextBookByTheseAuthors);
+            pagesize();
+        });
+
+        $(function() {//return;
+            //$("#the-cauldron").css("position", "relative").css("top", "-210px");
+            //$("#the-cauldron img").css("border", "solid 0px Transparent").css("width", "240px").css("height", "117px").css("float", "left");
+            $("#the-cauldron a").click(tcStats);
+            //$("#letters-to-graves").css("text-align", "center").css("font-size", "70%").css("color", "Black");
+            //$("#letters-to-graves strong").css("font-size", "150%").css("color", "White").css("line-height", "30px");
+            //$("#letters-to-graves em").css("background", "url(images/sparkle.gif)");
+            //$("#subscribe-to-the-cauldron").css("text-align", "center").css("clear", "both");
+            //$("div.book div a img").width(70).height(100);
+            //$("div.book div.center").css("float", "left").css("padding-left", "20px");
+            //$("div.book ul").css("margin-left", "120px");
+            if (!$.browser.msie) {
+                $("#the-cauldron").css("opacity", 0.0).animate({ opacity: 1.0 }, { "duration": 4371 });
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+
+<div id="oz">
+	<div id="iz">
+		<div id="rb">
+			<p><strong><span class="style2">The Writings of Roy Bowers Online</span></strong>
+			</p>
+		</div>
+		<div id="main">
+			<div id="online" class="left half">
+				<h1>PDF File Downloads</h1>
+				<hr/>
+				<ul id="pdfs">
+					<li><a onclick="pdfStats(1);" class="pdflink" href="/bowers/wilson.pdf" target="_blank">
+					<span class="download">Letters to Joe Wilson</span> - 1,500 KB</a></li>
+					<li><a onclick="pdfStats(2);" class="pdflink" href="/bowers/norman.pdf" target="_blank">
+					<span class="download">Letters to Norman Gills</span> - 432 KB</a></li>
+					<li><a onclick="pdfStats(3);" class="pdflink" href="/bowers/bill.pdf" target="_blank">
+					<span class="download">Letters to Bill Gray</span> - 3,349 KB</a></li>
+					<li><a onclick="pdfStats(4);" class="pdflink" href="/bowers/esbat.pdf" target="_blank">
+					<span class="download">Witches&#39; Esbat</span> - 155 KB</a></li>
+					<li><a onclick="pdfStats(5);" class="pdflink" href="/bowers/craft.pdf" target="_blank">
+					<span class="download">The Craft Today</span> - 111 KB</a></li>
+					<li><a onclick="pdfStats(6);" class="pdflink" href="/bowers/cords.pdf" target="_blank">
+					<span class="download">On Cords</span> - 107 KB</a></li>
+					<li><a onclick="pdfStats(7);" class="pdflink" href="/bowers/faith.pdf" target="_blank">
+					<span class="download">The Faith of the Wise</span> - 130 KB</a></li>
+					<li><a onclick="pdfStats(8);" class="pdflink" href="/bowers/ash.pdf" target="_blank">
+					<span class="download">The Ash Tree</span> - 124 KB</a></li>
+					<li><a onclick="pdfStats(9);" class="pdflink" href="/bowers/all.pdf" target="_blank">
+					<span class="download">Download all-in-one PDF</span> - 5,611 KB</a></li>
+					<li><a onclick="pdfStats(10);" class="pdflink" href="/bowers/all.zip" target="_blank">
+					<span class="download">Download ZIP archive</span> - 5,633 KB</a></li>
+				</ul>
+				<p class="curt">Preservation, text and imaging courtesy of Dave Finnan, with much thanks.</p>
+				<p class="copy"><a href="index.html">Copyright Information and Terms of Use</a> </p>
+			</div>
+			<div id="mid" class="left">
+				<div id="fly">
+				    <div id="license">
+					    In fulfilling our duty as legacy holders <br/>
+					    of the spirit of Robert Cochrane within <br/>
+					    <strong>&#39;The Clan of Tubal Cain&#39;,</strong> <br/>
+					    we are happy for these documents to remain<br/>
+					    available to the public and offered free of charge <br/>
+					    <strong>on this official site,</strong> <br/>
+					    which is now at liberty to do so <br/>
+					    through our legal authority <br/>
+					    and hereby <strong>granted</strong> on behalf of <br/>
+					    the copyright owner, the Estate of E.J. Jones. <br/>
+					    <br/>
+					    We would politely request you access these materials <br/>
+					    for fair and <strong>personal</strong> use only and <br/>
+					    not for reproduction or publication upon any media. <br/>
+					    <br/>
+					    Please refer to copyright terms listed here <br/>
+					    [<a class="copyinfo" href="/bowers/copyright.htm">/bowers/copyright.htm</a>] <br/>
+					    for further advice on this matter. <br/>
+					    <div id="signed">
+                            <span id="maid"><span id="shani">Shani Oates</span>, Maid of the Clan of Tubal Cain</span>
+                        </div>
+				    </div>
+				</div>
+			</div>
+			<div class="right half makeway">
+		        <div id="the-cauldron">
+		            <a href="https://www.the-cauldron.org.uk/robertcochraneletters.html" target="_blank"><img src="/bowers/images/tc-black.png" alt="The Cauldron [www.the-cauldron.org.uk]" title="The Cauldron [www.the-cauldron.org.uk]"/></a>
+		            <div id="letters-to-graves">With an intro. by Prof. Grevel Lindop<br/><strong>Robert Cochrane's letters to<br/><em>Robert Graves</em></strong></div>
+		            <div id="subscribe-to-the-cauldron"><a href="https://www.the-cauldron.org.uk/robertcochraneletters.html" target="_blank">Now available to read online!</a></div>
+		        </div>
+				<div id="books" class="center">
+					<div id="published2" class="book" style="display: none;">
+						<h1>The Roebuck in the Thicket </h1>
+						<h2 class="roebuck">An Anthology of the<br/>
+						Robert Cochrane<br/>
+						Witchcraft Tradition </h2>
+						<h3>with Evan John Jones,<br/>
+						Edited<br/>
+						by Michael Howard<br/>
+						</h3>
+						<p>Roy Bowers and The Clan of Tubal Cain, their ritual, 
+						teachings and beliefs and his workings written by himself 
+						to Evan John Jones, with additional writings by Evan John 
+						Jones and editing by Michael Howard. </p>
+						<div class="center">
+							<a href="https://www.capallbann.co.uk/popup.cfm?p_n=22613&amp;p_i=22613">
+							<img alt="" height="200" src="/bowers/images/roebuck-in-the-thicket-an-anthology.png" width="140"/></a>
+						</div>
+						<ul class="style3">
+							<li>
+							<a onclick="bookStats(1);" href="https://www.capallbann.co.uk/popup.cfm?p_n=22613&amp;p_i=22613" target="_blank">
+							Capall Bann .co.uk</a></li>
+							<li style="display: none;">
+							<a onclick="bookStats(2);" href="https://www.amazon.co.uk/Roebuck-Thicket-Anthology-Cochrane-Tradition/dp/1861631553" target="_blank">
+							Amazon .co.uk</a></li>
+							<li style="display: none;">
+							<a onclick="bookStats(3);" href="https://www.amazon.com/Roebuck-Thicket-Anthology-Witchcraft-Tradition/dp/1861631553" target="_blank">
+							Amazon .com</a></li>
+						</ul>
+					</div>
+					<div id="published1" class="book">
+						<h1>The Robert Cochrane Letters </h1>
+						<h2>An Insight into<br/>
+						Modern<br/>
+						Traditional Witchcraft</h2>
+						<h3>with Evan John Jones,<br/>
+						Edited and Introduced<br/>
+						by Michael Howard<br/>
+						</h3>
+						<p>
+						    <strong>* NEW *</strong> <a href="https://www.clanoftubalcain.org.uk/cyphers.html" target="_blank">Ciphers and Symbols</a><br/>
+							<!--== At last, a complete table of figures to accompany the definite treatment of the text. Includes an explanation of their correspondences within Robert Cochrane&apos;s tradition. ---->
+							<strong style="color: White;">* NEW *</strong> <a href="https://www.mandrake.uk.net/shanioates.htm" target="_blank">Tubelo's Green Fire</a><br/>
+							Mythos, Ethos, Female, Male &amp; Priestly Mysteries of the Clan of Tubal Cain <em style="color: White;">by Shani Oates</em>
+						</p>
+						<div class="center">
+							<a href="https://www.capallbann.co.uk/popup.cfm?p_n=91456&amp;p_i=91456">
+							<img alt="" height="200" src="/bowers/images/robert-cochrane-letters-an-insight.png" width="140"/></a>
+						</div>
+						<ul class="style3">
+							<li>
+							<a onclick="bookStats(1);" href="https://www.capallbann.co.uk/popup.cfm?p_n=91456&amp;p_i=91456" target="_blank">
+							Capall Bann .co.uk</a></li>
+							<li style="display: none;">
+							<a onclick="bookStats(2);" href="https://www.amazon.co.uk/Robert-Cochrane-Letters-Traditional-Witchcraft/dp/1861632215" target="_blank">
+							Amazon .co.uk</a></li>
+							<li style="display: none;">
+							<a onclick="bookStats(3);" href="https://www.amazon.com/Robert-Cochrane-Letters-Traditional-Witchcraft/dp/1861632215" target="_blank">
+							Amazon .com</a></li>
+						</ul>
+					</div>
+					<a class="next" href="index.html">also by the authors</a>
+				</div>
+			</div>
+			<div class="clear">
+			</div>
+			<div id="cotc" class="center"><a href="https://www.clanoftubalcain.org.uk/">Clan of Tubal Cain .org.uk</a></div>
+			<div id="copyright" class="center">
+				<a href="/bowers/copyright.htm"> Estate of E.J. Jones. All rights reserved.</a></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+

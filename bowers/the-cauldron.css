@@ -1,0 +1,72 @@
+#the-cauldron 
+{
+    position: relative; 
+    top: -210px;
+}
+#the-cauldron img
+{
+    border: solid 0px Transparent; 
+    width: 240px;
+    height: 117px;
+    float: left;
+}
+#letters-to-graves
+{
+    text-align: center; 
+    font-size: 70%;
+    color: Black;
+}
+#letters-to-graves strong
+{
+    line-height: 30px; 
+    font-size: 150%;
+    color: White;
+}
+#letters-to-graves em
+{
+    background-image: url(/bowers/images/sparkle.gif); 
+}
+#subscribe-to-the-cauldron
+{
+    text-align: center; 
+    clear: both;
+}
+div.book div a img
+{
+    width: 70px; 
+    height: 100px; 
+}
+div.book div.center
+{
+    float: left;
+    padding-left: 20px; 
+}
+div.book ul
+{
+    margin-left: 120px; 
+}
+a.next
+{
+    clear: both;
+}
+
+/*
+     FILE ARCHIVED ON 21:49:14 Jul 08, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:58:58 Apr 10, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.926
+  exclusion.robots: 0.075
+  exclusion.robots.policy: 0.062
+  esindex: 0.011
+  cdx.remote: 38.437
+  LoadShardBlock: 268.583 (3)
+  PetaboxLoader3.datanode: 187.354 (4)
+  PetaboxLoader3.resolve: 203.845 (2)
+  load_resource: 252.204
+*/
